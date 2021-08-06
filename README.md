@@ -1,10 +1,10 @@
-This is the code and data for the BMVC'20 paper "Learning to Abstract and Predict Human Actions".
+This is the code and data for the BMVC'20 paper [Learning to Abstract and Predict Human Actions](https://www.bmvc2020-conference.com/conference/papers/paper_0979.html).
 
 # Download Data
 Please download the Hierarchical Breakfast from the link below and put the folder `HierarchicalBreakfast` folder 
 inside a `data` directory in this current directory (i.e. `./data/HierarchicalBreakfast/...`).
 
-Link: [Hierarchical Breakfast](https://bit.ly/3g37Wvx).
+Link: [Hierarchical Breakfast](https://bit.ly/3xu7Gy6).
 
 For the original Breakfast Actions dataset annotation, and other related material (e.g. videos), please access 
 [Breakfast Actions](https://serre-lab.clps.brown.edu/resource/breakfast-actions-dataset/).
