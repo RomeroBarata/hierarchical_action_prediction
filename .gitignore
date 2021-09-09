@@ -107,4 +107,4 @@ venv.bak/
 .idea/
 
 # Miscellanea
-data
+/data
