@@ -21,7 +21,8 @@ from fpua.utils import nan_to_value, numpy_to_torch, maybe_denormalise, logit2on
 
 
 def test_hera(args):
-    checkpoint = torch.load(args.checkpoint)
+    device = 'cuda' if torch.cuda.is_available() else 'cpu'
+    checkpoint = torch.load(args.checkpoint, map_location=device)
     fine_labels_path = args.fine_labels_path
     coarse_labels_path = args.coarse_labels_path
     fine_action_to_id = read_action_dictionary(args.fine_action_to_id)
@@ -37,7 +38,6 @@ def test_hera(args):
     scalers = checkpoint.get('scalers', None)
     disable_parent_input = checkpoint['disable_parent_input']
     # Load model
-    device = 'cuda' if torch.cuda.is_available() else 'cpu'
     model = HERA(**checkpoint['model_creation_args']).to(device)
     model.load_state_dict(checkpoint['model_state_dict'])
     model.eval()
